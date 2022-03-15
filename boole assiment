@@ -1,0 +1,34 @@
+int y;
+int x=1;
+
+void setup() {
+ Serial.begin(9600);
+    pinMode(8,OUTPUT);
+    pinMode(9,OUTPUT);
+    pinMode(10,OUTPUT);
+    
+    while (x < 4 ) {
+        // Display the cycle number in the Serial Monitor
+        Serial.print("Cycle no ");
+        Serial.println(x);
+        
+        // Turn on each LED in sequence
+        digitalWrite((x + 7),HIGH);
+        delay(for (x= 0; x < 256; x=x+1 ){
+        analogWrite(6,x);
+        delay(4);
+    }
+    
+    // Fade LED from full power to 0 over one second
+    for (x = 255; x >= 0; x = x + 1){
+        analogWrite(6,x);
+        delay(4);
+        x = x + 1;
+    }
+}   
+}
+
+
+void loop() {
+    
+}
